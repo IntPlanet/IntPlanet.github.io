@@ -36,7 +36,7 @@
     
     
       
-        <title>Introduction of GEE - 解译星球 -> IntPlanet</title>
+        <title>GEE first lab - 解译星球 -> IntPlanet</title>
       
     
     
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#google-earth-engine-a-planetary-scale-platform-for-earth-science-data-analysis" tabindex="1" class="md-skip">
+      <a href="#gee" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -113,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Introduction of GEE
+                GEE first lab
               
             </span>
           
@@ -181,9 +181,7 @@
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -244,7 +242,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../GEE/" class="md-tabs__link">
           GEE
         </a>
       
@@ -506,12 +504,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       GEE
@@ -527,20 +523,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Introduction of GEE" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../GEE/" title="Introduction of GEE" class="md-nav__link">
       Introduction of GEE
     </a>
-    
   </li>
 
         
@@ -683,8 +670,35 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gee" class="md-nav__link">
+    二、GEE初识
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    2.1 十五秒钟见证奇迹
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -696,68 +710,37 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/IntPlanet/intplanet/edit/master/docs/GEE/GEE.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/IntPlanet/intplanet/edit/master/docs/GEE/GEE_first_lab.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <p><img alt="home_classifier" src="../../img/Home/home_classifier.png" /></p>
-<h1 id="google-earth-engine-a-planetary-scale-platform-for-earth-science-data-analysis"><strong>Google Earth Engine:  A planetary-scale platform for Earth science data &amp; analysis</strong><a class="headerlink" href="#google-earth-engine-a-planetary-scale-platform-for-earth-science-data-analysis" title="Permanent link">&para;</a></h1>
-<hr />
-<div class="admonition question">
-<p class="admonition-title">Google Earth Engine 是何方神圣</p>
-</div>
-<p><a href="https://earthengine.google.com/">谷歌地球引擎</a>（<u><strong>G</strong></u>oogle <u><strong>E</strong></u>arth <u><strong>E</strong></u>ngine，<strong>GEE</strong>）是谷歌旗下的一个地理空间数据处理和分析平台，属于 <a href="https://www.google.com/earth/">Google Earth</a> 生态系统中的核心产品。</p>
-<p>相比于 <a href="https://www.harrisgeospatial.com/Software-Technology/ENVI">ENVI</a> 等传统影像处理工具，<strong>GEE</strong> 可以快速、批量处理行星级影像数据。通过 <strong>GEE</strong> 可以快速计算如 <a href="https://en.wikipedia.org/wiki/Normalized_difference_vegetation_index">NDVI</a> 等指数，用于预测作物相关产量、监测旱情长势变化以及分析全球森林变化等。官方对 <strong>GEE</strong> 的宣传介绍视频如下：</p>
-<iframe height="600" width="900" src="//player.bilibili.com/player.html?aid=87823062&cid=150045611&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+                  <h1>GEE first lab</h1>
+                
+                <h2 id="gee">二、GEE初识<a class="headerlink" href="#gee" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 十五秒钟见证奇迹<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>通过一个简单例子介绍 <strong>GEE</strong>。</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// 加载LandSat7图像</span>
+<span class="kd">var</span> <span class="nx">collection</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LE7_L1T&#39;</span><span class="p">);</span>
 
-<blockquote>
-<p>Google Earth Engine combines a multi-petabyte catalog of satellite imagery and geospatial datasets with planetary-scale analysis capabilities and makes it available for scientists, researchers, and developers to detect changes, map trends, and quantify differences on the Earth's surface.</p>
-</blockquote>
-<p><strong>GEE</strong> 包含 PB 级海量地理信息空间数据，主要有：</p>
-<ul>
-<li>超过 40 年的 LandSat 系列卫星影像数据（16 天重访周期）；</li>
-<li>Sentinel 1 &amp; 2 卫星影像数据；</li>
-<li>
-<p>MODIS 中等分辨率遥感影像数据（一天两次覆盖，36 个谱段）；</p>
-</li>
-<li>
-<p>Terrian 全球地形数据；</p>
-</li>
-<li>
-<p>非卫星影像数据：Elevation、Land cover、Climate data、Topography、Vector data 等。</p>
-</li>
-</ul>
-<p>官方统计，<strong>GEE</strong> 数据中心包含超过 200 个公共数据集、500 万张影像（并以每天大约 4000 张影像的速度增长），总容量超过 5PB（1<u>EB</u>=1024<u>PB</u>=1024<span><span class="MathJax_Preview">\times</span><script type="math/tex">\times</script></span>1024<u>TB</u>=1024<span><span class="MathJax_Preview">\times</span><script type="math/tex">\times</script></span>1024<span><span class="MathJax_Preview">\times</span><script type="math/tex">\times</script></span>1024<u>GB</u>）。</p>
-<p><strong>GEE</strong> 不仅提供了在线的 <mark>JavaScript API</mark>，同时也提供了离线的 <mark>Python API</mark>。通过这些 <a href="https://developers.google.com/earth-engine/">API</a> 可以快速建立基于 <strong>GEE</strong> 平台及谷歌云的 Web 应用。更多关于 <strong>GEE</strong> 的介绍参见：</p>
-<ul>
-<li><strong>GEE</strong> 官方网地：<a href="https://earthengine.google.com/">earthengine.google.com</a></li>
-<li><strong>GEE</strong> GUI 交互界面：<a href="https://explorer.earthengine.google.com/">explorer.earthengine.google.com</a></li>
-<li><strong>GEE</strong> Coder 界面：<a href="https://code.earthengine.google.com/">code.earthengine.google.com</a></li>
-<li><strong>GEE</strong> 文档地址：<a href="https://developers.google.com/earth-engine">developers.google.com/earth-engine</a></li>
-</ul>
-<div class="admonition question">
-<p class="admonition-title">为什么 Google Earth Engine 值得学习</p>
-</div>
-<p>目前处理遥感影像的工具用很多，比如最流行也是最为人熟知的有 <a href="https://www.harrisgeospatial.com/Software-Technology/ENVI">ENVI</a>、<a href="https://www.esri.com/en-us/arcgis/">ArcGIS</a>，但是它们都是商业软件，许可证不仅收费，而且非常昂贵，动辄数十万，国内绝大多数人使用的都是和谐版。更为重要的是，它们提供的解决方案在技术先进性、可定制化和性价比等方面都难以让人满意。</p>
-<p>网上也有众多开源或免费的软件和工具，比如 <a href="https://www.qgis.org/en/site/index.html">QGIS</a>、<a href="https://www.orfeo-toolbox.org/">Orfeo ToolBox</a>、<a href="http://step.esa.int/main/toolboxes/snap/">SNAP</a> 等。但这些软件和工具都有一个共同的特点，就是在本地运行、计算，处理能力和本地设备好坏成正相关。<strong>GEE</strong> 运行于谷歌云之上，处理能力几乎不受空间、时间的限制，更为最为重要的是 <strong>GEE</strong> 对个人和非商业用户免费。</p>
-<p>同时，云端 <strong>GEE</strong> 采用 <a href="https://www.javascript.com/">JavaScript</a> 编程、离线采用 <a href="https://www.python.org/">Python</a> 编程，学习成本较成熟的商业软件和开源软件都低。</p>
-<div class="admonition question">
-<p class="admonition-title">Google Earth Engine 能应用在什么场景</p>
-</div>
-<ul>
-<li>快速计算如 NDVI 等指数；</li>
-<li>全球尺度土地分类变化监测；</li>
-<li>农作物产量预测；</li>
-<li>自然灾害监测；</li>
-<li>气候变化监测；</li>
-<li>......</li>
-</ul>
-<div class="admonition question">
-<p class="admonition-title">Google Earth Engine 有何优缺点</p>
-</div>
-<ul>
-<li><mark><strong>优点</strong></mark>：免费、云计算、数据获取方便、处理能力接近无限、稳定；</li>
-<li><mark><strong>缺点</strong></mark>：需要科学上网。</li>
-</ul>
+<span class="c1">// 通过时间过滤图像</span>
+<span class="kd">var</span> <span class="nx">filtered</span> <span class="o">=</span> <span class="nx">collection</span><span class="p">.</span><span class="nx">filterDate</span><span class="p">(</span><span class="s1">&#39;2011-01-01&#39;</span><span class="p">,</span> <span class="s1">&#39;2012-12-31&#39;</span><span class="p">);</span>
+
+<span class="c1">// 取得像素中位数</span>
+<span class="kd">var</span> <span class="nx">medianImage</span> <span class="o">=</span> <span class="nx">filtered</span><span class="p">.</span><span class="nx">median</span><span class="p">();</span>
+
+<span class="c1">// 添加图层</span>
+<span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">medianImage</span><span class="p">,</span> <span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B1&#39;</span><span class="p">],</span> <span class="nx">min</span><span class="o">:</span><span class="mi">35</span><span class="p">,</span> <span class="nx">max</span><span class="o">:</span><span class="mi">170</span><span class="p">},</span> <span class="s1">&#39;mapLayer&#39;</span><span class="p">);</span>
+</pre></div>
+</td></tr></table>
                 
                   
                 
@@ -775,41 +758,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../../GIS/GIS/" title="Introduction of GIS" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  上一页
-                </span>
-                Introduction of GIS
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../../OpenGEE/OpenGEE/" title="Introduction of OpenGEE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  下一页
-                </span>
-                Introduction of OpenGEE
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

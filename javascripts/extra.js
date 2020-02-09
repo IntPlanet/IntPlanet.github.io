@@ -14,7 +14,7 @@ window.MathJax = {
       fonts: "STIXGeneral,'Arial Unicode MS'"
     }
   },
-  displayAlign: "left",
+  displayAlign: "center", // 公式显示位置: left/center/right, 默认为: center
   showProcessingMessages: false,
   messageStyle: "none"
 };

@@ -63,6 +63,8 @@
     <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     
       
     
@@ -578,6 +580,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../OpenGEE_installation/" title="Installation of OpenGEE" class="md-nav__link">
+      Installation of OpenGEE
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -685,23 +699,18 @@
                   <a href="https://github.com/IntPlanet/intplanet/edit/master/docs/OpenGEE/OpenGEE.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-
-<script>
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-  }
-};
-</script>
-
-<script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-
-<p><img alt="home_classifier" src="../../img/Home/home_classifier.png" /></p>
-<h1 id="google-earth-enterprise-opengee"><strong>Google Earth Enterprise (openGEE)</strong><a class="headerlink" href="#google-earth-enterprise-opengee" title="Permanent link">&para;</a></h1>
+                <p><img alt="home_classifier" src="../../img/Home/home_classifier.png" /></p>
+<h1 id="google-earth-enterprise-opengee"><strong>Google Earth Enterprise (OpenGEE)</strong><a class="headerlink" href="#google-earth-enterprise-opengee" title="Permanent link">&para;</a></h1>
 <hr />
+<p><strong>Earth Enterprise</strong> 是谷歌地球企业版（<u><strong>G</strong></u>oogle <u><strong>E</strong></u>arth <u><strong>E</strong></u>nterprise，<strong>GEE</strong>）的开源实现，简称 <strong>OpenGEE</strong>，谷歌于2017年3月将其开源并托管在 Github: <a href="https://github.com/google/earthenterprise">google/earthenterprise</a>。</p>
+<p><strong>GEE</strong> 是一款地理空间应用程序，可用于构建和托管自定义 3D 地球和 2D 地图。<strong>OpenGEE</strong> 不提供 Google 地图或 Google 地球中当前可用的 Google 影像及私有图库。</p>
+<p><strong>OpenGEE</strong> 包含三大核心组件：</p>
+<ul>
+<li><u><strong>Fusion</strong></u>：将图像，矢量和地形数据源导入并融合到单个可漫游的 3D 地球或 2D 地图中，<mark>已完全开源</mark>。</li>
+<li><u><strong>Server</strong></u>：基于 <a href="http://www.apache.org/">Apache</a> 或 <a href="http://www.tornadoweb.org/">Tornado</a> 的服务器，托管由 Fusion 构建的私有地球模型，<mark>已完全开源</mark>。</li>
+<li><u><strong>Client</strong></u>：用于查看 3D 地球模型和 2D 地图的 Google 地球企业版客户端（<a href="https://github.com/google/earthenterprise/wiki/Google-Earth-Enterprise-Client-(EC)">Earth Client</a>，EC）和 Google Maps 的 Javascript API V3。<mark>其中 EC 免费下载和使用，Google Maps 的 API Javascript API V3 已完全开源</mark>。</li>
+</ul>
+<p><img alt="Earth Enterprise核心功能示意图" src="../../img/OpenGEE/Earth_Enterprise_core.png" /></p>
                 
                   
                 
@@ -738,13 +747,13 @@ MathJax = {
           </a>
         
         
-          <a href="../../Recruitment2020/" title="JOIN US RIGHT NEW!" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../OpenGEE_installation/" title="Installation of OpenGEE" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                JOIN US RIGHT NEW!
+                Installation of OpenGEE
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -759,11 +768,12 @@ MathJax = {
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        powered by
+        <a href="http://intplanet.mgcsat.com/">InPlanet</a>
+		由
         <a href="https://www.mkdocs.org">MkDocs</a>
-        and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
-          Material for MkDocs</a>
+        驱动，主题使用
+        <a href="https://squidfunk.github.io/mkdocs-material/"> 
+		Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
@@ -799,6 +809,8 @@ MathJax = {
         
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../javascripts/extra.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
