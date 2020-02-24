@@ -67,6 +67,31 @@
     
     
       
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-158661759-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,8 +103,6 @@
     <svg class="md-svg">
       <defs>
         
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -147,28 +170,6 @@
 </div>
         
       </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://github.com/IntPlanet/intplanet/" title="前往 Github 仓库" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
-  <div class="md-source__repository">
-    IntPlanet/intplanet
-  </div>
-</a>
-          </div>
-        </div>
       
     </div>
   </nav>
@@ -324,26 +325,6 @@
     </a>
     解译星球 -> IntPlanet
   </label>
-  
-    <div class="md-nav__source">
-      
-
-
-  
-
-<a href="https://github.com/IntPlanet/intplanet/" title="前往 Github 仓库" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
-  <div class="md-source__repository">
-    IntPlanet/intplanet
-  </div>
-</a>
-    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -1074,8 +1055,6 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/IntPlanet/intplanet/edit/master/docs/GEE/GEE_python_env.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
-                
                 
                 <p><img alt="home_classifier" src="../../img/Home/home_classifier.png" /></p>
 <h1 id="gee-python"><strong>GEE Python 开发环境搭建</strong><a class="headerlink" href="#gee-python" title="Permanent link">&para;</a></h1>
@@ -1101,33 +1080,33 @@
 </blockquote>
 <h3 id="22-gee-pyhton-api">2.2 GEE Pyhton API 安装<a class="headerlink" href="#22-gee-pyhton-api" title="Permanent link">&para;</a></h3>
 <p>打开终端，首先安装 Google 的 Python API 的客户端，命令如下：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install google-api-python-client
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>pip install google-api-python-client
+</code></pre></div>
 </td></tr></table>
 
 <p>安装鉴权验证依赖库，输入下面命令：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install pyCrypto
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>pip install pyCrypto
+</code></pre></div>
 </td></tr></table>
 
 <p>如果报错（Pyhthon 2.7.x 一般不会报错，Python 3 可能会报错），改装 pycryptodome：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install pycryptodome
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>pip install pycryptodome
+</code></pre></div>
 </td></tr></table>
 
 <p>继续安装 GEE 的 Python API 库：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install earthengine-api
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>pip install earthengine-api
+</code></pre></div>
 </td></tr></table>
 
 <p>最后验证 GEE 账户：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>earthengine authenticate
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>earthengine authenticate
+</code></pre></div>
 </td></tr></table>
 
 <p>可能会提示错误：<code>No module named oauth2client</code>，执行下面安装 oauth2client 即可：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install --upgrade oauth2client
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>pip install --upgrade oauth2client
+</code></pre></div>
 </td></tr></table>
 
 <p>没有报错后就会打开网页，选择可用的 Google 账号，然后获取令牌，复制后切回终端，并将其粘贴到终端，回车。若出现：<code>Successfully saved authorization token.</code>，则说明令牌验证成功；否则，验证失败，检查操作系统当前用户名是否全为数字或英文字母，若不是，修改为只由数字和英文字母组成的用户名。</p>
@@ -1142,7 +1121,7 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># -*- coding:utf-8 -*-</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># -*- coding:utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">ee</span>
 <span class="n">ee</span><span class="o">.</span><span class="n">Initialize</span><span class="p">()</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;srtm90_v4&#39;</span><span class="p">)</span>
@@ -1152,7 +1131,7 @@
    <span class="s1">&#39;region&#39;</span><span class="p">:</span> <span class="s1">&#39;[[-120, 35], [-119, 35], [-119, 34], [-120, 34]]&#39;</span>
 <span class="p">})</span>
 <span class="k">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1"># 获取DEM下载地址</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>若在运行<code>ee.Initialize()</code>时提示：<code>TimeoutError: [WinError 10060] 由于连接方在一段时间后没有正确答复或连接的主机没有反应，连接尝试失败</code>，解决方法有二：</p>
@@ -1160,9 +1139,9 @@
 <li><strong>方法一</strong>：退出 Python 环境，在终端设置代理</li>
 </ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">set</span> <span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:1080
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">set</span> <span class="nv">http_proxy</span><span class="o">=</span>http://127.0.0.1:1080
 <span class="nb">set</span> <span class="nv">https_proxy</span><span class="o">=</span>http://127.0.0.1:1080 
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <ul>
@@ -1183,7 +1162,7 @@
 13
 14
 15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># -*- coding:utf-8 -*-</span>
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># -*- coding:utf-8 -*-</span>
 <span class="kn">import</span> <span class="nn">ee</span>
 
 <span class="c1"># ee.Initialize() 之前设置代理</span>
@@ -1199,7 +1178,7 @@
    <span class="s1">&#39;region&#39;</span><span class="p">:</span> <span class="s1">&#39;[[-120, 35], [-119, 35], [-119, 34], [-120, 34]]&#39;</span>
 <span class="p">})</span>
 <span class="k">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="c1"># 获取DEM下载链接，复制链接至浏览器可下载文件</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p><strong>注意</strong>：上述代理设置中的端口信息需要根据自己的实际情况加以修改，但一般情况下就是<code>http://127.0.0.1:1080</code>。根据在 Win10 上的经验，方法二可较好地解决问题。</p>
@@ -1226,11 +1205,11 @@
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ee</span> 
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">ee</span> 
 <span class="o">&gt;&gt;&gt;</span> <span class="n">image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;srtm90_v4&#39;</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="k">print</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
 <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;Image&#39;</span><span class="p">,</span> <span class="s1">&#39;bands&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;elevation&#39;</span><span class="p">,</span> <span class="s1">&#39;data_type&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;type&#39;</span><span class="p">:</span> <span class="s1">&#39;PixelType&#39;</span><span class="p">,</span> <span class="s1">&#39;precision&#39;</span><span class="p">:</span> <span class="s1">&#39;int&#39;</span><span class="p">,</span> <span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mi">32768</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">32767</span><span class="p">},</span> <span class="s1">&#39;dimensions&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">432000</span><span class="p">,</span> <span class="mi">144000</span><span class="p">],</span> <span class="s1">&#39;crs&#39;</span><span class="p">:</span> <span class="s1">&#39;EPSG:4326&#39;</span><span class="p">,</span> <span class="s1">&#39;crs_transform&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.000833333333333</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">180.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.000833333333333</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">]}],</span> <span class="s1">&#39;version&#39;</span><span class="p">:</span> <span class="mi">1494271934303000</span><span class="p">,</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="s1">&#39;srtm90_v4&#39;</span><span class="p">,</span> <span class="s1">&#39;properties&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;system:time_start&#39;</span><span class="p">:</span> <span class="mi">950227200000</span><span class="p">,</span> <span class="s1">&#39;system:time_end&#39;</span><span class="p">:</span> <span class="mi">951177600000</span><span class="p">,</span> <span class="s1">&#39;system:asset_size&#39;</span><span class="p">:</span> <span class="mi">18827626666</span><span class="p">}}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>若运行过程中可能出现链接错误（一般由代理不稳定引起），可考虑将代理设置添加进 Python 代码：</p>
@@ -1243,7 +1222,7 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">ee</span> 
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">ee</span> 
 
 <span class="c1"># 设置代理并初始化ee开发环境</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -1253,7 +1232,7 @@
 
 <span class="n">image</span> <span class="o">=</span> <span class="n">ee</span><span class="o">.</span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;srtm90_v4&#39;</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">image</span><span class="o">.</span><span class="n">getInfo</span><span class="p">())</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h3 id="33">3.3 入门示例<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
@@ -1288,7 +1267,7 @@
 15
 16
 17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 导入ee模块</span>
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 导入ee模块</span>
 <span class="kn">import</span> <span class="nn">ee</span>
 
 <span class="c1"># 添加影像变量</span>
@@ -1306,7 +1285,7 @@
 <span class="c1"># 定位底图（San Francisco Bay, 旧金湾）并显示影像</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">setCenter</span><span class="p">(</span><span class="o">-</span><span class="mf">122.1899</span><span class="p">,</span> <span class="mf">37.5010</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">vizParams</span><span class="p">,</span> <span class="s1">&#39;false color composite&#39;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p><img alt="example_A" src="../../img/GEE/Python/QGIS_gee_plugin_example_A.png" /></p>
@@ -1323,7 +1302,7 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># 导入ee和ee_plugin中的Map模块</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># 导入ee和ee_plugin中的Map模块</span>
 <span class="kn">import</span> <span class="nn">ee</span>
 <span class="kn">from</span> <span class="nn">ee_plugin</span> <span class="kn">import</span> <span class="n">Map</span>
 
@@ -1333,7 +1312,7 @@
 <span class="c1"># 计算NDVI并显示影像</span>
 <span class="n">ndvi</span> <span class="o">=</span> <span class="n">landsat8</span><span class="o">.</span><span class="n">normalizedDifference</span><span class="p">([</span><span class="s1">&#39;B5&#39;</span><span class="p">,</span><span class="s1">&#39;B4&#39;</span><span class="p">])</span>
 <span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">ndvi</span><span class="p">,{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;palette&#39;</span><span class="p">:[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">]},</span> <span class="s1">&#39;NDVI&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>归一化植被指数（Normalized Difference Vegetation Index, NDVI）是量化处于生长期植被覆盖情况的重要指标，GEE 基于 Landsat、MODIS 等卫星遥感影像得到的 NDVI 时序数据已经在各尺度区域的植被动态变化监测、土地利用/覆被变化检测、宏观植被覆盖分类和净初级生产力估算等研究中得到了广泛的应用。本示例的结果如下图所示：</p>
@@ -1383,7 +1362,7 @@
 38
 39
 40
-41</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">ee</span> 
+41</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">ee</span> 
 <span class="kn">from</span> <span class="nn">ee_plugin</span> <span class="kn">import</span> <span class="n">Map</span> 
 
 <span class="c1"># 导入去云的Landsat 8 T1级合成影像, 详细参见：</span>
@@ -1424,7 +1403,7 @@
 <span class="n">Map</span><span class="o">.</span><span class="n">addLayer</span><span class="p">(</span><span class="n">classified</span><span class="p">,</span>
              <span class="p">{</span><span class="s1">&#39;min&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;max&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;palette&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">]},</span>
              <span class="s1">&#39;classification&#39;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>上述代码用 CART 分类器对 Landsat 八个谱段影像进行了样本训练分类，结果如下：</p>

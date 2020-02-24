@@ -67,6 +67,31 @@
     
     
       
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-158661759-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -78,8 +103,6 @@
     <svg class="md-svg">
       <defs>
         
-        
-          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
         
       </defs>
     </svg>
@@ -147,28 +170,6 @@
 </div>
         
       </div>
-      
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            
-
-
-  
-
-<a href="https://github.com/IntPlanet/intplanet/" title="前往 Github 仓库" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
-  <div class="md-source__repository">
-    IntPlanet/intplanet
-  </div>
-</a>
-          </div>
-        </div>
       
     </div>
   </nav>
@@ -324,26 +325,6 @@
     </a>
     解译星球 -> IntPlanet
   </label>
-  
-    <div class="md-nav__source">
-      
-
-
-  
-
-<a href="https://github.com/IntPlanet/intplanet/" title="前往 Github 仓库" class="md-source" data-md-source="github">
-  
-    <div class="md-source__icon">
-      <svg viewBox="0 0 24 24" width="24" height="24">
-        <use xlink:href="#__github" width="24" height="24"></use>
-      </svg>
-    </div>
-  
-  <div class="md-source__repository">
-    IntPlanet/intplanet
-  </div>
-</a>
-    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -952,8 +933,6 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/IntPlanet/intplanet/edit/master/docs/MkDocs_intro.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
-                
                 
                 <p><img alt="home_classifier" src="../img/Home/home_classifier.png" /></p>
 <h1 id="mkdocs"><strong>MkDocs：快速、简单且华丽的静态站点生成器</strong><a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h1>
@@ -964,15 +943,15 @@
 <p>MkDocs 自带两款主题，分别为 <code>mkdocs</code> 和 <code>readthedocs</code>，其中 <code>mkdocs</code> 为默认主题。当然，一个流行的站点生成器少不了优秀的第三方主题（参见：<a href="https://www.wheelodex.org/entry-points/mkdocs.themes/">mkdocs.themes</a>），本站使用的主题为 <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>。</p>
 <h2 id="mkdocs_2"><u>安装 MkDocs</u><a class="headerlink" href="#mkdocs_2" title="Permanent link">&para;</a></h2>
 <p>确保操作系统具有 Python 环境和 <a href="http://pip.readthedocs.io/en/stable/installing/">pip</a> 工具后，采用如下命令安装MkDocs：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>pip install mkdocs
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>pip install mkdocs
+</code></pre></div>
 </td></tr></table>
 
 <p>安装完成后，可以检查一下 MkDocs 是否安装成功：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>mkdocs --version
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>mkdocs --version
 &gt;&gt;&gt; mkdocs, version <span class="m">1</span>.0.4 from c:<span class="se">\a</span>naconda3<span class="se">\l</span>ib<span class="se">\s</span>ite-packages<span class="se">\m</span>kdocs <span class="o">(</span>Python <span class="m">3</span>.7<span class="o">)</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>若能看到输出版本号且无任何报错，即表示 MkDocs 安装成功。</p>
@@ -990,12 +969,12 @@
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="hll"><span class="l l-Scalar l-Scalar-Plain">mkdocs_project/</span>   <span class="c1"># 根目录</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="hll"><span class="l l-Scalar l-Scalar-Plain">mkdocs_project/</span>   <span class="c1"># 根目录</span>
 </span>    <span class="l l-Scalar l-Scalar-Plain">mkdocs.yml</span>    <span class="c1"># 站点配置文件</span>
     <span class="l l-Scalar l-Scalar-Plain">docs/</span>
         <span class="l l-Scalar l-Scalar-Plain">index.md</span>  <span class="c1"># 站点主页</span>
         <span class="l l-Scalar l-Scalar-Plain">...</span>       <span class="c1"># 其他 Markdown 页面，图片及其他文件</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h2 id="_1"><u>页面公式显示</u><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
@@ -1019,7 +998,7 @@
 13
 14
 15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">// 浏览器兼容性设置</span>
+16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">// 浏览器兼容性设置</span>
 <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 
 <span class="c1">// 行内公式标识修改</span>
@@ -1035,7 +1014,7 @@
 <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;MathJax-script&quot;</span> <span class="nx">async</span>
   <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="err">/script&gt;</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h3 id="_2">公式测试<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -1045,10 +1024,10 @@
 <p>这是行间公式：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sb">\[</span><span class="nb"></span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="sb">\[</span><span class="nb"></span>
 <span class="nv">\sum</span><span class="nb">_{i</span><span class="o">=</span><span class="m">0</span><span class="nb">}^n i^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="o">(</span><span class="nb">n^</span><span class="m">2</span><span class="o">+</span><span class="nb">n</span><span class="o">)(</span><span class="m">2</span><span class="nb">n</span><span class="o">+</span><span class="m">1</span><span class="o">)</span><span class="nb">}{</span><span class="m">6</span><span class="nb">}</span>
 <span class="s">\]</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <div>
@@ -1062,10 +1041,10 @@
 <p>也可以写成这样：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="sb">$$</span><span class="nb"></span>
 <span class="nv">\sum</span><span class="nb">_{i</span><span class="o">=</span><span class="m">0</span><span class="nb">}^n i^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="o">(</span><span class="nb">n^</span><span class="m">2</span><span class="o">+</span><span class="nb">n</span><span class="o">)(</span><span class="m">2</span><span class="nb">n</span><span class="o">+</span><span class="m">1</span><span class="o">)</span><span class="nb">}{</span><span class="m">6</span><span class="nb">}</span>
 <span class="s">$$</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <div>
@@ -1079,10 +1058,10 @@
 <p>整点复杂的：</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="sb">$$</span><span class="nb"></span>
 <span class="nb">E</span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb">{v}, </span><span class="nv">\mathbf</span><span class="nb">{h}</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="o">-</span><span class="nv">\sum</span><span class="nb">_{i,j}w_{ij}v_i h_j </span><span class="o">-</span><span class="nb"> </span><span class="nv">\sum</span><span class="nb">_i b_i v_i </span><span class="o">-</span><span class="nb"> </span><span class="nv">\sum</span><span class="nb">_j c_j h_j</span>
 <span class="s">$$</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <div>
@@ -1096,11 +1075,11 @@ E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">\begin</span><span class="nb">{</span>align<span class="nb">}</span>
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>align<span class="nb">}</span>
     p(v<span class="nb">_</span>i=1|<span class="k">\mathbf</span><span class="nb">{</span>h<span class="nb">}</span>) <span class="nb">&amp;</span> = <span class="k">\sigma\left</span>(<span class="k">\sum</span><span class="nb">_</span>j w<span class="nb">_{</span>ij<span class="nb">}</span>h<span class="nb">_</span>j + b<span class="nb">_</span>i<span class="k">\right</span>) <span class="k">\\</span>
     p(h<span class="nb">_</span>j=1|<span class="k">\mathbf</span><span class="nb">{</span>v<span class="nb">}</span>) <span class="nb">&amp;</span> = <span class="k">\sigma\left</span>(<span class="k">\sum</span><span class="nb">_</span>i w<span class="nb">_{</span>ij<span class="nb">}</span>v<span class="nb">_</span>i + c<span class="nb">_</span>j<span class="k">\right</span>)
 <span class="k">\end</span><span class="nb">{</span>align<span class="nb">}</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <div>
@@ -1117,12 +1096,12 @@ E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sb">$$</span><span class="nb"></span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="sb">$$</span><span class="nb"></span>
 <span class="nv">\left\{</span><span class="nb"> </span><span class="nv">\begin</span><span class="nb">{array}{l}</span>
 <span class="m">0</span><span class="nb"> </span><span class="o">=</span><span class="nb"> c_x</span><span class="o">-</span><span class="nb">a_{x</span><span class="m">0</span><span class="nb">}</span><span class="o">-</span><span class="nb">d_{x</span><span class="m">0</span><span class="nb">}</span><span class="nv">\dfrac</span><span class="nb">{</span><span class="o">(</span><span class="nb">c_x</span><span class="o">-</span><span class="nb">a_{x</span><span class="m">0</span><span class="nb">}</span><span class="o">)</span><span class="nv">\cdot</span><span class="nb"> d_{x</span><span class="m">0</span><span class="nb">}}{</span><span class="nv">\|</span><span class="nb">d_{x</span><span class="m">0</span><span class="nb">}</span><span class="nv">\|</span><span class="nb">^</span><span class="m">2</span><span class="nb">} </span><span class="o">+</span><span class="nb"> c_x</span><span class="o">-</span><span class="nb">a_{x</span><span class="m">1</span><span class="nb">}</span><span class="o">-</span><span class="nb">d_{x</span><span class="m">1</span><span class="nb">}</span><span class="nv">\dfrac</span><span class="nb">{</span><span class="o">(</span><span class="nb">c_x</span><span class="o">-</span><span class="nb">a_{x</span><span class="m">1</span><span class="nb">}</span><span class="o">)</span><span class="nv">\cdot</span><span class="nb"> d_{x</span><span class="m">1</span><span class="nb">}}{</span><span class="nv">\|</span><span class="nb">d_{x</span><span class="m">1</span><span class="nb">}</span><span class="nv">\|</span><span class="nb">^</span><span class="m">2</span><span class="nb">} </span><span class="nv">\\</span><span class="o">[</span><span class="m">2</span><span class="nb">ex</span><span class="o">]</span><span class="nb"> </span>
 <span class="m">0</span><span class="nb"> </span><span class="o">=</span><span class="nb"> c_y</span><span class="o">-</span><span class="nb">a_{y</span><span class="m">0</span><span class="nb">}</span><span class="o">-</span><span class="nb">d_{y</span><span class="m">0</span><span class="nb">}</span><span class="nv">\dfrac</span><span class="nb">{</span><span class="o">(</span><span class="nb">c_y</span><span class="o">-</span><span class="nb">a_{y</span><span class="m">0</span><span class="nb">}</span><span class="o">)</span><span class="nv">\cdot</span><span class="nb"> d_{y</span><span class="m">0</span><span class="nb">}}{</span><span class="nv">\|</span><span class="nb">d_{y</span><span class="m">0</span><span class="nb">}</span><span class="nv">\|</span><span class="nb">^</span><span class="m">2</span><span class="nb">} </span><span class="o">+</span><span class="nb"> c_y</span><span class="o">-</span><span class="nb">a_{y</span><span class="m">1</span><span class="nb">}</span><span class="o">-</span><span class="nb">d_{y</span><span class="m">1</span><span class="nb">}</span><span class="nv">\dfrac</span><span class="nb">{</span><span class="o">(</span><span class="nb">c_y</span><span class="o">-</span><span class="nb">a_{y</span><span class="m">1</span><span class="nb">}</span><span class="o">)</span><span class="nv">\cdot</span><span class="nb"> d_{y</span><span class="m">1</span><span class="nb">}}{</span><span class="nv">\|</span><span class="nb">d_{y</span><span class="m">1</span><span class="nb">}</span><span class="nv">\|</span><span class="nb">^</span><span class="m">2</span><span class="nb">} </span><span class="nv">\end</span><span class="nb">{array} </span><span class="nv">\right</span><span class="nb">. </span>
 <span class="s">$$</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <div>
