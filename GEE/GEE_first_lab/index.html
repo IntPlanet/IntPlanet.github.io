@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../../img/logo/logo48.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.0">
     
     
       
@@ -510,6 +510,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Wecht Posts for RS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Wecht Posts for RS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RS/Landsat_100_million_downloads/" title="Landsat 100 million downloads" class="md-nav__link">
+      Landsat 100 million downloads
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -719,17 +755,7 @@
                 <h2 id="gee">二、GEE初识<a class="headerlink" href="#gee" title="Permanent link">&para;</a></h2>
 <h3 id="21">2.1 十五秒钟见证奇迹<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
 <p>通过一个简单例子介绍 <strong>GEE</strong>。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">// 加载LandSat7图像</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// 加载LandSat7图像</span>
 <span class="kd">var</span> <span class="nx">collection</span> <span class="o">=</span> <span class="nx">ee</span><span class="p">.</span><span class="nx">ImageCollection</span><span class="p">(</span><span class="s1">&#39;LANDSAT/LE7_L1T&#39;</span><span class="p">);</span>
 
 <span class="c1">// 通过时间过滤图像</span>
@@ -741,7 +767,6 @@
 <span class="c1">// 添加图层</span>
 <span class="nx">Map</span><span class="p">.</span><span class="nx">addLayer</span><span class="p">(</span><span class="nx">medianImage</span><span class="p">,</span> <span class="p">{</span><span class="nx">bands</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;B3&#39;</span><span class="p">,</span> <span class="s1">&#39;B2&#39;</span><span class="p">,</span> <span class="s1">&#39;B1&#39;</span><span class="p">],</span> <span class="nx">min</span><span class="o">:</span><span class="mi">35</span><span class="p">,</span> <span class="nx">max</span><span class="o">:</span><span class="mi">170</span><span class="p">},</span> <span class="s1">&#39;mapLayer&#39;</span><span class="p">);</span>
 </code></pre></div>
-</td></tr></table>
                 
                   
                 
@@ -804,7 +829,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/extra.js"></script>
       

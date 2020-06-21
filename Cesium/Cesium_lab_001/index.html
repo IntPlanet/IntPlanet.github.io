@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../../img/logo/logo48.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.0">
     
     
       
@@ -510,6 +510,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Wecht Posts for RS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Wecht Posts for RS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RS/Landsat_100_million_downloads/" title="Landsat 100 million downloads" class="md-nav__link">
+      Landsat 100 million downloads
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -723,33 +759,7 @@
 <li><strong>ThirdParty</strong>：第三方工具。</li>
 </ul>
 <p>使用编辑器（Windows下推荐VS Code）打开App下的 <code>HelloWorld.html</code> 文件，将内容替换成以下代码：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
   <span class="c">&lt;!-- Use correct character set. --&gt;</span>
@@ -777,7 +787,6 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>其中：</p>
 <ul>
@@ -785,11 +794,9 @@
 <li><code>viewer._cesiumWidget._creditContainer.style.display="none";</code> 是为了取消视图中的Cesium官方Logo。</li>
 </ul>
 <p>保存修改，在解压后的Cesium安装包根目录下打开终端（推荐PowerShell），然后输入：<code>node server</code>，即可启动Cesium本地服务。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">PS </span><span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">user</span><span class="p">\</span><span class="n">Cesium161</span><span class="p">&gt;</span> <span class="n">node</span> <span class="n">server</span>
+<div class="highlight"><pre><span></span><code><span class="nb">PS </span><span class="n">C</span><span class="err">:</span><span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">user</span><span class="p">\</span><span class="n">Cesium161</span><span class="p">&gt;</span> <span class="n">node</span> <span class="n">server</span>
 <span class="n">Cesium</span> <span class="n">development</span> <span class="n">server</span> <span class="n">running</span> <span class="n">locally</span><span class="p">.</span>  <span class="n">Connect</span> <span class="n">to</span> <span class="n">http</span><span class="err">:</span><span class="p">//</span><span class="n">localhost</span><span class="err">:</span><span class="n">8080</span><span class="p">/</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>浏览器（推荐Chrome或Firefox）中打开：<a href="http://localhost:8080/">http://localhost:8080/</a>，即可进入Cesium本地服务的主页面：</p>
 <p><img src="./Images/Cesium_index.jpg" style="zoom:67%;" /></p>
@@ -804,42 +811,11 @@
 <p><img src="./Images/Cesium_main_windows.jpg" style="zoom:45%;" /></p>
 <h3 id="22-http-server">2.2 使用http-server创建服务<a class="headerlink" href="#22-http-server" title="Permanent link">&para;</a></h3>
 <p>除了使用Node创建本地服务，还可使用http-server这个Node.js三方库创建本地服务。首先需要使用Node包管理命令nmp进行安装：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>npm install -g http-server <span class="c1"># -g 表示全局安装</span>
+<div class="highlight"><pre><span></span><code>npm install -g http-server <span class="c1"># -g 表示全局安装</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>新建文件夹 <code>CesiumApp</code>，再在该目录下新建 <code>scripts</code> 文件夹和 <code>index.html</code> 文件，并将 <strong>Build</strong> 下的 <code>Cesium</code> 复制到 <code>scripts</code> 文件夹内，随后在 <code>index.html</code> 中写入如下代码：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
@@ -871,21 +847,13 @@
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p><code>CesiumApp</code> 文件夹内打开终端，输入：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>http-server -p <span class="m">8081</span> <span class="c1"># http-server 可简写为 hs</span>
+<div class="highlight"><pre><span></span><code>http-server -p <span class="m">8081</span> <span class="c1"># http-server 可简写为 hs</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>终端自动输出：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>Starting up http-server, serving ./
+<div class="highlight"><pre><span></span><code>Starting up http-server, serving ./
 Available on:
   http://192.168.30.1:8081
   http://192.168.254.1:8081
@@ -893,30 +861,12 @@ Available on:
   http://127.0.0.1:8081
 Hit CTRL-C to stop the server
 </code></pre></div>
-</td></tr></table>
 
 <p>然后在支持WebGIS的浏览器（推荐 Firefox 或 Chrome）中输入：<a href="http://127.0.0.1:8081/index.html">http://127.0.0.1:8081/index.html</a>（或者上面三个地址 + <code>/index.html</code>）即可进入Cesium的主界面。</p>
 <h2 id="3">3、服务器开发环境<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <h3 id="31-glitch">3.1 创建Glitch项目<a class="headerlink" href="#31-glitch" title="Permanent link">&para;</a></h3>
 <p>所有Web程序需要一个Web服务器，Cesium也不例外。Cesium ion需要付费，学习阶段为了方便，可使用Glitch和 一个在线的IDE做程序开发。<a href="https://glitch.com/edit/#!/remix/hello-webpage">点击这里</a>创建一个Glitch项目（推荐使用Github账号注册），Glitch加载之后，忽略模板提示，直接点击 <code>index.html</code> 删除整个内容，把以下代码粘贴进去：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cesiumjs.org/releases/1.63.1/Build/Cesium/Cesium.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -935,7 +885,6 @@ Hit CTRL-C to stop the server
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p><code>Ctrl+S</code> 保存后，点击左上角的预览图标，会打开一个新窗口，并显示了Cesium的主界面。随后若修改 <code>index.html</code>，这个弹出的窗口会自动刷新。</p>
 <ul>
@@ -944,36 +893,28 @@ Hit CTRL-C to stop the server
 </ul>
 <h3 id="32">3.2 代码分析<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
 <p>首先在HTML的head标签内引用CesiumJS的库，其中 <code>releases</code> 后面的版本号可更新至最新的Cesium版本。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;https://cesiumjs.org/releases/1.63.1/Build/Cesium/Cesium.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;https://cesiumjs.org/releases/1.63.1/Build/Cesium/Cesium.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;https://cesiumjs.org/releases/1.63.1/Build/Cesium/Widgets/widgets.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>创建一个HTML标签去承载CesiumJS控件（widget）：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;cesiumContainer&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;cesiumContainer&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>从你的Cesium ion账户提供一个token去访问Bing影像底图，注意将 <code>your_access_token</code> 替换。</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span> <span class="o">=</span> <span class="s1">&#39;your_access_token&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span> <span class="o">=</span> <span class="s1">&#39;your_access_token&#39;</span><span class="p">;</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>最后，创建一个名为Viewer的Cesium控件，并且让他去使用上面定义的HTML元素：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">viewer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;cesiumContainer&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">viewer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;cesiumContainer&#39;</span><span class="p">);</span>
 </code></pre></div>
-</td></tr></table>
 
 <h3 id="33-cesium">3.3 添加Cesium全球地形<a class="headerlink" href="#33-cesium" title="Permanent link">&para;</a></h3>
 <p>Cesium全球地形是一个高精度地形库，在你的Cesium ion账户里已经有访问权限。用下述代码替换我们做的第一个示例里的创建Viewer的部分:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="kd">var</span> <span class="nx">viewer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;cesiumContainer&#39;</span><span class="p">,</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">viewer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;cesiumContainer&#39;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">terrainProvider</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">createWorldTerrain</span><span class="p">()</span>
 <span class="p">});</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>接下来，既可在预览界面缩放到特定位置，比如搜索 <code>Grand Canyon, AZ, USA</code>，就看到如下图效果（<code>鼠标中键</code> 或 <code>Ctrl+鼠标左键</code> 调整视角）：</p>
 <p><img src="./Images/Glitch_Terrain.jpg" style="zoom:45%;" /></p>
@@ -982,17 +923,12 @@ Hit CTRL-C to stop the server
 <ul>
 <li>一个是 <code>baseLayerPicker</code> 参数：它控制影像的拾取，在加载自定义影像前需将其值更改为 <code>fasle</code>，更改后右上角的影像切换按钮就会消失。</li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">// 创建一个名为Viewer的Cesium控件, 并加载Cesium全球地形数据</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// 创建一个名为Viewer的Cesium控件, 并加载Cesium全球地形数据</span>
 <span class="kd">var</span> <span class="nx">viewer</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">Viewer</span><span class="p">(</span><span class="s1">&#39;cesiumContainer&#39;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">baseLayerPicker</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="nx">terrainProvider</span><span class="o">:</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">createWorldTerrain</span><span class="p">()</span>
 <span class="p">});</span>
 </code></pre></div>
-</td></tr></table>
 
 <ul>
 <li>
@@ -1026,26 +962,7 @@ Hit CTRL-C to stop the server
 </li>
 </ul>
 <p>其中，<a href="http://localhost:8080/Build/Documentation/GoogleEarthEnterpriseImageryProvider.html">GoogleEarthEnterpriseImageryProvider</a> 是加载 GoogleEarth 企业版影像数据，<a href="http://localhost:8080/Build/Documentation/UrlTemplateImageryProvider.html">UrlTemplateImageryProvider</a> 是根据 URL 模板加载影像数据，打开 <a href="http://localhost:8080/Build/Documentation/GoogleEarthEnterpriseImageryProvider.html">GoogleEarthEnterpriseImageryProvider</a> 就可以发现它是一个构造函数。由于 GoogleEarth 企业版影像数据已经无法访问，故采用 URL 模板加载谷歌中国地区的影像数据。将下面的代码替换 JavaScript 中的代码，即可实现谷歌中国地区的影像数据的加载：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
 
     <span class="c1">// 创建谷歌中国地区的影像数据</span>
     <span class="kd">var</span> <span class="nx">guge</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">UrlTemplateImageryProvider</span><span class="p">({</span>
@@ -1066,7 +983,6 @@ Hit CTRL-C to stop the server
 
   <span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h1 id="cesium-ion">二、Cesium Ion入门<a class="headerlink" href="#cesium-ion" title="Permanent link">&para;</a></h1>
 <h2 id="1cesium">1、Cesium云服务简介<a class="headerlink" href="#1cesium" title="Permanent link">&para;</a></h2>
@@ -1077,18 +993,14 @@ Hit CTRL-C to stop the server
 <p>其实现方式就是通过这个 Ion，在保持其原有渲染引擎不变的情况下，为每位用户提供了 5G 的存储空间，用户可以上传自己的数据（影像或者是 3D 数据）， Cesium 将此数据切割后存放在空间中，用户便可通过极其简单的方式分享和调用此数据。 Cesium 还为每位用户提供了几种默认影像数据和 1 种地表数据。详情见（<a href="https://link.jianshu.com/?t=https%3A%2F%2Fcesium.com%2Fion%2Finfo%2Fwelcome">https://cesium.com/ion/info/welcome</a>）。</p>
 <p><img alt="img" src="https://upload-images.jianshu.io/upload_images/1457239-81797ba2064d000d.png?imageMogr2/auto-orient/strip|imageView2/2/w/1200/format/webp" /></p>
 <p>前台调用方式基本不变（先将 Cesium 升级至最新版），调用云端数据也十分方便，如下：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nx">viewer</span><span class="p">.</span><span class="nx">imageryLayers</span><span class="p">.</span><span class="nx">addImageryProvider</span><span class="p">(</span>
+<div class="highlight"><pre><span></span><code><span class="nx">viewer</span><span class="p">.</span><span class="nx">imageryLayers</span><span class="p">.</span><span class="nx">addImageryProvider</span><span class="p">(</span>
     <span class="k">new</span> <span class="nx">Cesium</span><span class="p">.</span><span class="nx">IonImageryProvider</span><span class="p">({</span> <span class="nx">assetId</span><span class="o">:</span> <span class="mi">2</span> <span class="p">})</span>
 <span class="p">);</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>即只需要改一下 assetId 号即可，当然需要先创建 Cesium 账户，并取到 Access Token，在 js 开篇加入：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span> <span class="o">=</span> <span class="s1">&#39;your/ion/access/token&#39;</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="nx">Cesium</span><span class="p">.</span><span class="nx">Ion</span><span class="p">.</span><span class="nx">defaultAccessToken</span> <span class="o">=</span> <span class="s1">&#39;your/ion/access/token&#39;</span><span class="p">;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h3 id="13">1.3 启示<a class="headerlink" href="#13" title="Permanent link">&para;</a></h3>
 <p>这件事情看上去好像并没有多么神奇，但是我个人觉得这为我们建设**空间数据云**提供了一些启示。</p>
@@ -1157,7 +1069,7 @@ Hit CTRL-C to stop the server
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/extra.js"></script>
       

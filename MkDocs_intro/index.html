@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../img/logo/logo48.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.0">
     
     
       
@@ -627,6 +627,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Wecht Posts for RS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Wecht Posts for RS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../RS/Landsat_100_million_downloads/" title="Landsat 100 million downloads" class="md-nav__link">
+      Landsat 100 million downloads
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -904,16 +940,13 @@
 <p>MkDocs 自带两款主题，分别为 <code>mkdocs</code> 和 <code>readthedocs</code>，其中 <code>mkdocs</code> 为默认主题。当然，一个流行的站点生成器少不了优秀的第三方主题（参见：<a href="https://www.wheelodex.org/entry-points/mkdocs.themes/">mkdocs.themes</a>），本站使用的主题为 <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>。</p>
 <h2 id="mkdocs_2"><u>安装 MkDocs</u><a class="headerlink" href="#mkdocs_2" title="Permanent link">&para;</a></h2>
 <p>确保操作系统具有 Python 环境和 <a href="http://pip.readthedocs.io/en/stable/installing/">pip</a> 工具后，采用如下命令安装MkDocs：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>pip install mkdocs
+<div class="highlight"><pre><span></span><code>pip install mkdocs
 </code></pre></div>
-</td></tr></table>
 
 <p>安装完成后，可以检查一下 MkDocs 是否安装成功：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>mkdocs --version
+<div class="highlight"><pre><span></span><code>mkdocs --version
 &gt;&gt;&gt; mkdocs, version <span class="m">1</span>.0.4 from c:<span class="se">\a</span>naconda3<span class="se">\l</span>ib<span class="se">\s</span>ite-packages<span class="se">\m</span>kdocs <span class="o">(</span>Python <span class="m">3</span>.7<span class="o">)</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>若能看到输出版本号且无任何报错，即表示 MkDocs 安装成功。</p>
 <h2 id="mkdocs_3"><u>MkDocs 命令</u><a class="headerlink" href="#mkdocs_3" title="Permanent link">&para;</a></h2>
@@ -926,17 +959,12 @@
 <li><code>mkdocs help</code> - 打印帮助信息。</li>
 </ul>
 <h2 id="mkdocs_4"><u>MkDocs 项目结构</u><a class="headerlink" href="#mkdocs_4" title="Permanent link">&para;</a></h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="hll"><span class="l l-Scalar l-Scalar-Plain">mkdocs_project/</span>   <span class="c1"># 根目录</span>
+<div class="highlight"><pre><span></span><code><span class="hll"><span class="l l-Scalar l-Scalar-Plain">mkdocs_project/</span>   <span class="c1"># 根目录</span>
 </span>    <span class="l l-Scalar l-Scalar-Plain">mkdocs.yml</span>    <span class="c1"># 站点配置文件</span>
     <span class="l l-Scalar l-Scalar-Plain">docs/</span>
         <span class="l l-Scalar l-Scalar-Plain">index.md</span>  <span class="c1"># 站点主页</span>
         <span class="l l-Scalar l-Scalar-Plain">...</span>       <span class="c1"># 其他 Markdown 页面，图片及其他文件</span>
 </code></pre></div>
-</td></tr></table>
 
 <h2 id="_1"><u>页面公式显示</u><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="mathjax">MathJax 网页脚本<a class="headerlink" href="#mathjax" title="Permanent link">&para;</a></h3>
@@ -944,22 +972,7 @@
 <p class="admonition-title">下面的方法本站已经弃用，目前使用 <a href="https://python-markdown.github.io/extensions/admonition/">Admonition</a> 实现 MkDocs 对 <a href="https://facelessuser.github.io/pymdown-extensions/">PyMdown Extensions</a> 的支持。Arithmatex 使用方法参见：<a href="https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/">pymdown-extensions/extensions/arithmatex</a>，后续更新参见：<a href="../Material_for_MkDocs/">Theme this Site Use</a></p>
 </div>
 <p>在 Markdown 文件头部添加 <a href="https://www.mathjax.org/">MathJax</a> 网页版脚本可显示公式（参见：<a href="https://docs.mathjax.org/en/latest/web/start.html#getting-started-with-mathjax-components">Getting Started with MathJax Components</a>），需要添加三段 JavaScript 脚本：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">// 浏览器兼容性设置</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// 浏览器兼容性设置</span>
 <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 
 <span class="c1">// 行内公式标识修改</span>
@@ -976,20 +989,16 @@
   <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h3 id="_2">公式测试<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="_3">行内公式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>这是行内公式：<span><span class="MathJax_Preview">a^2+b^2=c^2</span><script type="math/tex">a^2+b^2=c^2</script></span>，代码为 <code>$a^2+b^2=c^2$</code> 或 <code>\(a^2+b^2=c^2\)</code>。行内公式避免使用 <code>$...$</code> 实现，建议用 <code>\(...\)</code> 实现，从而可以有效避免了美元符号 <code>$</code> 潜在的不正常显示问题。</p>
 <h4 id="_4">行间公式<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>这是行间公式：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="sb">\[</span><span class="nb"></span>
+<div class="highlight"><pre><span></span><code><span class="sb">\[</span><span class="nb"></span>
 <span class="nv">\sum</span><span class="nb">_{i</span><span class="o">=</span><span class="m">0</span><span class="nb">}^n i^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="o">(</span><span class="nb">n^</span><span class="m">2</span><span class="o">+</span><span class="nb">n</span><span class="o">)(</span><span class="m">2</span><span class="nb">n</span><span class="o">+</span><span class="m">1</span><span class="o">)</span><span class="nb">}{</span><span class="m">6</span><span class="nb">}</span>
 <span class="s">\]</span>
 </code></pre></div>
-</td></tr></table>
 
 <div>
 <div class="MathJax_Preview">
@@ -1000,13 +1009,10 @@
 </script>
 </div>
 <p>也可以写成这样：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="sb">$$</span><span class="nb"></span>
+<div class="highlight"><pre><span></span><code><span class="sb">$$</span><span class="nb"></span>
 <span class="nv">\sum</span><span class="nb">_{i</span><span class="o">=</span><span class="m">0</span><span class="nb">}^n i^</span><span class="m">2</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="nv">\frac</span><span class="nb">{</span><span class="o">(</span><span class="nb">n^</span><span class="m">2</span><span class="o">+</span><span class="nb">n</span><span class="o">)(</span><span class="m">2</span><span class="nb">n</span><span class="o">+</span><span class="m">1</span><span class="o">)</span><span class="nb">}{</span><span class="m">6</span><span class="nb">}</span>
 <span class="s">$$</span>
 </code></pre></div>
-</td></tr></table>
 
 <div>
 <div class="MathJax_Preview">
@@ -1017,13 +1023,10 @@
 </script>
 </div>
 <p>整点复杂的：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="sb">$$</span><span class="nb"></span>
+<div class="highlight"><pre><span></span><code><span class="sb">$$</span><span class="nb"></span>
 <span class="nb">E</span><span class="o">(</span><span class="nv">\mathbf</span><span class="nb">{v}, </span><span class="nv">\mathbf</span><span class="nb">{h}</span><span class="o">)</span><span class="nb"> </span><span class="o">=</span><span class="nb"> </span><span class="o">-</span><span class="nv">\sum</span><span class="nb">_{i,j}w_{ij}v_i h_j </span><span class="o">-</span><span class="nb"> </span><span class="nv">\sum</span><span class="nb">_i b_i v_i </span><span class="o">-</span><span class="nb"> </span><span class="nv">\sum</span><span class="nb">_j c_j h_j</span>
 <span class="s">$$</span>
 </code></pre></div>
-</td></tr></table>
 
 <div>
 <div class="MathJax_Preview">
@@ -1033,15 +1036,11 @@ E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c
 E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j
 </script>
 </div>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>align<span class="nb">}</span>
+<div class="highlight"><pre><span></span><code><span class="k">\begin</span><span class="nb">{</span>align<span class="nb">}</span>
     p(v<span class="nb">_</span>i=1|<span class="k">\mathbf</span><span class="nb">{</span>h<span class="nb">}</span>) <span class="nb">&amp;</span> = <span class="k">\sigma\left</span>(<span class="k">\sum</span><span class="nb">_</span>j w<span class="nb">_{</span>ij<span class="nb">}</span>h<span class="nb">_</span>j + b<span class="nb">_</span>i<span class="k">\right</span>) <span class="k">\\</span>
     p(h<span class="nb">_</span>j=1|<span class="k">\mathbf</span><span class="nb">{</span>v<span class="nb">}</span>) <span class="nb">&amp;</span> = <span class="k">\sigma\left</span>(<span class="k">\sum</span><span class="nb">_</span>i w<span class="nb">_{</span>ij<span class="nb">}</span>v<span class="nb">_</span>i + c<span class="nb">_</span>j<span class="k">\right</span>)
 <span class="k">\end</span><span class="nb">{</span>align<span class="nb">}</span>
 </code></pre></div>
-</td></tr></table>
 
 <div>
 <div class="MathJax_Preview">\begin{align}
@@ -1053,17 +1052,12 @@ E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c
     p(h_j=1|\mathbf{v}) & = \sigma\left(\sum_i w_{ij}v_i + c_j\right)
 \end{align}</script>
 </div>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="sb">$$</span><span class="nb"></span>
+<div class="highlight"><pre><span></span><code><span class="sb">$$</span><span class="nb"></span>
 <span class="nv">\left\{</span><span class="nb"> </span><span class="nv">\begin</span><span class="nb">{array}{l}</span>
 <span class="m">0</span><span class="nb"> </span><span class="o">=</span><span class="nb"> c_x</span><span class="o">-</span><span class="nb">a_{x</span><span class="m">0</span><span class="nb">}</span><span class="o">-</span><span class="nb">d_{x</span><span class="m">0</span><span class="nb">}</span><span class="nv">\dfrac</span><span class="nb">{</span><span class="o">(</span><span class="nb">c_x</span><span class="o">-</span><span class="nb">a_{x</span><span class="m">0</span><span class="nb">}</span><span class="o">)</span><span class="nv">\cdot</span><span class="nb"> d_{x</span><span class="m">0</span><span class="nb">}}{</span><span class="nv">\|</span><span class="nb">d_{x</span><span class="m">0</span><span class="nb">}</span><span class="nv">\|</span><span class="nb">^</span><span class="m">2</span><span class="nb">} </span><span class="o">+</span><span class="nb"> c_x</span><span class="o">-</span><span class="nb">a_{x</span><span class="m">1</span><span class="nb">}</span><span class="o">-</span><span class="nb">d_{x</span><span class="m">1</span><span class="nb">}</span><span class="nv">\dfrac</span><span class="nb">{</span><span class="o">(</span><span class="nb">c_x</span><span class="o">-</span><span class="nb">a_{x</span><span class="m">1</span><span class="nb">}</span><span class="o">)</span><span class="nv">\cdot</span><span class="nb"> d_{x</span><span class="m">1</span><span class="nb">}}{</span><span class="nv">\|</span><span class="nb">d_{x</span><span class="m">1</span><span class="nb">}</span><span class="nv">\|</span><span class="nb">^</span><span class="m">2</span><span class="nb">} </span><span class="nv">\\</span><span class="o">[</span><span class="m">2</span><span class="nb">ex</span><span class="o">]</span><span class="nb"> </span>
 <span class="m">0</span><span class="nb"> </span><span class="o">=</span><span class="nb"> c_y</span><span class="o">-</span><span class="nb">a_{y</span><span class="m">0</span><span class="nb">}</span><span class="o">-</span><span class="nb">d_{y</span><span class="m">0</span><span class="nb">}</span><span class="nv">\dfrac</span><span class="nb">{</span><span class="o">(</span><span class="nb">c_y</span><span class="o">-</span><span class="nb">a_{y</span><span class="m">0</span><span class="nb">}</span><span class="o">)</span><span class="nv">\cdot</span><span class="nb"> d_{y</span><span class="m">0</span><span class="nb">}}{</span><span class="nv">\|</span><span class="nb">d_{y</span><span class="m">0</span><span class="nb">}</span><span class="nv">\|</span><span class="nb">^</span><span class="m">2</span><span class="nb">} </span><span class="o">+</span><span class="nb"> c_y</span><span class="o">-</span><span class="nb">a_{y</span><span class="m">1</span><span class="nb">}</span><span class="o">-</span><span class="nb">d_{y</span><span class="m">1</span><span class="nb">}</span><span class="nv">\dfrac</span><span class="nb">{</span><span class="o">(</span><span class="nb">c_y</span><span class="o">-</span><span class="nb">a_{y</span><span class="m">1</span><span class="nb">}</span><span class="o">)</span><span class="nv">\cdot</span><span class="nb"> d_{y</span><span class="m">1</span><span class="nb">}}{</span><span class="nv">\|</span><span class="nb">d_{y</span><span class="m">1</span><span class="nb">}</span><span class="nv">\|</span><span class="nb">^</span><span class="m">2</span><span class="nb">} </span><span class="nv">\end</span><span class="nb">{array} </span><span class="nv">\right</span><span class="nb">. </span>
 <span class="s">$$</span>
 </code></pre></div>
-</td></tr></table>
 
 <div>
 <div class="MathJax_Preview">
@@ -1177,7 +1171,7 @@ E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:".."}})</script>
       
         <script src="../javascripts/extra.js"></script>
       

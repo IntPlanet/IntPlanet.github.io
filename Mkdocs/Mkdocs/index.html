@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
       
       <link rel="shortcut icon" href="../../img/logo/logo48.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-4.6.0">
     
     
       
@@ -510,6 +510,42 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      Wecht Posts for RS
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        Wecht Posts for RS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../RS/Landsat_100_million_downloads/" title="Landsat 100 million downloads" class="md-nav__link">
+      Landsat 100 million downloads
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -787,16 +823,13 @@
 <p>MkDocs 自带两款主题，分别为 <code>mkdocs</code> 和 <code>readthedocs</code>，其中 <code>mkdocs</code> 为默认主题。当然，一个流行的站点生成器少不了优秀的第三方主题（参见：<a href="https://www.wheelodex.org/entry-points/mkdocs.themes/">mkdocs.themes</a>），本站使用的主题为 <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a>。</p>
 <h2 id="mkdocs_2"><u>安装 MkDocs</u><a class="headerlink" href="#mkdocs_2" title="Permanent link">&para;</a></h2>
 <p>确保操作系统具有 Python 环境和 <a href="http://pip.readthedocs.io/en/stable/installing/">pip</a> 工具后，采用如下命令安装MkDocs：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>pip install mkdocs
+<div class="highlight"><pre><span></span><code>pip install mkdocs
 </code></pre></div>
-</td></tr></table>
 
 <p>安装完成后，可以检查一下 MkDocs 是否安装成功：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>mkdocs --version
+<div class="highlight"><pre><span></span><code>mkdocs --version
 &gt;&gt;&gt; mkdocs, version <span class="m">1</span>.0.4 from c:<span class="se">\a</span>naconda3<span class="se">\l</span>ib<span class="se">\s</span>ite-packages<span class="se">\m</span>kdocs <span class="o">(</span>Python <span class="m">3</span>.7<span class="o">)</span>
 </code></pre></div>
-</td></tr></table>
 
 <p>若能看到输出版本号且无任何报错，即表示 MkDocs 安装成功。</p>
 <h2 id="mkdocs_3"><u>MkDocs 命令</u><a class="headerlink" href="#mkdocs_3" title="Permanent link">&para;</a></h2>
@@ -822,22 +855,7 @@ docs/
 <h2 id="_1"><u>页面公式显示</u><a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="mathjax">MathJax 网页脚本<a class="headerlink" href="#mathjax" title="Permanent link">&para;</a></h3>
 <p>在 Markdown 文件头部添加 <a href="https://www.mathjax.org/">MathJax</a> 网页版脚本可显示公式（参见：<a href="https://docs.mathjax.org/en/latest/web/start.html#getting-started-with-mathjax-components">Getting Started with MathJax Components</a>），需要添加三段 JavaScript 脚本：</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">// 浏览器兼容性设置</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// 浏览器兼容性设置</span>
 <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://polyfill.io/v3/polyfill.min.js?features=es6&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
 
 <span class="c1">// 行内公式标识修改</span>
@@ -854,7 +872,6 @@ docs/
   <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&quot;</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div>
-</td></tr></table>
 
 <h3 id="_2">公式测试<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <h4 id="_3">行内公式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
@@ -943,7 +960,7 @@ a^2+b^2=c^2
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.1.2",url:{base:"../.."}})</script>
       
         <script src="../../javascripts/extra.js"></script>
       
